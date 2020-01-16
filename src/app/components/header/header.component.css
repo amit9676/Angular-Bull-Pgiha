@@ -1,0 +1,14 @@
+div{
+    height:100%;
+    margin: 0;
+    padding: 0;
+    border: 2px solid black;
+}
+
+h1{
+    color: blue;
+    position: relative; 
+    top: -15%;
+    transform: translateY(-50%);
+    font-size: 80px;
+}

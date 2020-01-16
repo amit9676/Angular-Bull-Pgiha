@@ -1,0 +1,60 @@
+<div id='one'>
+    
+    <p id='two' dir='rtl'>משחק בול פגיעה - איך משחקים?<br>
+        משחק בול פגיעה (נקרא גם בול קליעה) הוא משחק חשיבה מגניב ומאתגר בו עליך לנחש קוד מספרים שהמחשב הגריל באקראיות<br>
+        כשלאחר כל ניחוש של הקוד, המחשב יגיד לך כמה פגיעות היו לך וכמה פגיעות בול. בקרוב תבין...<br>
+        משחק בול פגיעה הקלאסי הוא עם קוד בן 4 ספרות כשהספרה הראשונה לא יכולה להיות אפס<br>
+        ואף ספרה לא יכולה לחזור על עצמה פעמיים בקוד של בול פגיעה<br>
+        כלומר קודים כמו 7634, 1234, 9503 הם אפשריים<br>
+        אך קודים כמו 0123,5535 או 0000 הם בלתי אפשריים ולא יופיעו ואין טעם לטרוח ולנחש אותם.<br><br>
+        
+        לעזרת השחקן, לאחר כל ניחוש המחשב אומר כמה בולים וכמה פגיעות היו לו.<br>
+        בול הוא מצב בו אחת הספרות במספר שהשחקן ניחש זהה לספרה בקוד וממוקמת נכון<br>
+        פגיעה היא מצב בו אחת הספרות במספר שהשחקן ניחש זהה לספרה בקוד אך ממוקמת במיקום שונה<br>
+        מכאן אגב משחק בול פגיעה קיבל את שמו מצירוף שני המצבים : בול + פגיעה.<br>
+        אם למשל הקוד הוא 5678 ומנחשים 5732 אז יש בול אחד ופעמיים פגיעה.<br>
+        לאחר כל פגיעה בול, המחשב רושם את הספרה המתאימה בקוד, דבר שבהחלט מקל על ניחושים נוספים.<br>
+        האתגר במשחק בול פגיעה הוא לנחש את הקוד, כלומר להגיע לארבע פגיעות בול, בכמה שפחות ניחושים.<br>
+        
+        כדי לשחק עליך להקליד ספרה אחת בכל תיבת טקסט ליד המילה ניחושים ואז ללחוץ על <br>
+        הכפתור נחש, לאחר מכן המחשב ירשום כמה בול וכמה פגיעות היו בניחוש שלך ולפי זה תוכל לתקן את הניחוש<br>
+        ואז ללחוץ שוב על נחש עד שתגיע לקוד הנכון ותנצח במשחק בול פגיעה.<br>
+        כדי לעבור בין התיבות תוכל להשתמש במקש הtab ובשילוב המקשים של shift וtab<br>
+        כדי לאפס את כל התיבות ולנחש ניחוש חדש לגמרי לחץ על אפס תיבות.<br>
+        כדי להתחיל משחק בול פגיעה חדש עם קוד חדש לחץ על הכפתור קוד חדש<br><br>
+        
+        בהצלחה בהשגת פגיעה בול במטרה ו-משחק בול פגיעה מהנה :)
+    </p>
+
+    <div id='three'>
+        <div id='four'>
+            <br>
+            <p class='five'>ניחושים:</p>
+            
+            <input id='input1' onfocus="this.select();" maxlength="1" #firstnum='ngModel' name='input1' type="text" [(ngModel)]='valueOne'>
+            <input id='input2' onfocus="this.select();" maxlength="1" #firstnum='ngModel' name='input2' type="text" [(ngModel)]='valueTwo'>
+            <input id='input3' onfocus="this.select();" maxlength="1" #firstnum='ngModel' name='input3' type="text" [(ngModel)]='valueThree'>
+            <input id='input4' onfocus="this.select();" maxlength="1" #firstnum='ngModel' name='input4' type="text" [(ngModel)]='valueFour'>
+            <br><br><br>
+            <button [disabled]="endSwitch" (click)='selectText()'>נחש</button><button (click)='resetText()'>איפוס תיבת טקסט</button><button (click)='resetCounter()'>קוד חדש</button>
+            <br>
+            <p dir='rtl' class='five'>הקוד: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id='six'>{{numberPresent[3]}} {{numberPresent[2]}} {{numberPresent[1]}} {{numberPresent[0]}}</span> </p>
+            <br><br>
+            <p class='five'>בול: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span style='color: black'>{{bullCounter}}</span>
+            </p>
+            <p class='five'>פגיעות: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;
+                    <span style='color: black'>{{pgihaCounter}}</span>
+            </p>
+            <p class='five'>ניחושים: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style='color: black'>{{guessesCounter}}</span>
+            </p>
+
+            <p *ngIf='endSwitch' dir='rtl' id='endtext'>פיצחת את הקוד! תרצה לנסות שוב?</p>
+
+        </div></div>
+
+    
+</div>

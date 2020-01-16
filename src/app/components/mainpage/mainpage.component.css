@@ -1,0 +1,17 @@
+section{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 217, 0);
+    text-align: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 15% 85%;
+    /*border: 2px solid green;*/
+}
+
+header, main{
+    grid-column: span 12;
+    /*border: 2px solid green;*/
+}

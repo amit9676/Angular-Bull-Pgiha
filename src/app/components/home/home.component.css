@@ -1,0 +1,68 @@
+div{
+    height:95%;
+    margin: 0;
+    padding: 0;
+}
+
+#two{
+    position: relative; 
+    top: 45%;
+    right: 25%;
+    transform: translateY(-50%);
+    
+}
+
+
+#three{
+    
+    background-color: rgb(101, 156, 251);
+    width: 400px;
+    height: 500px;
+    /*position: relative;
+    top: -70%;
+    right: -65%;*/
+    position: absolute;
+    top: 170px;
+    right: 53px;
+}
+
+#four{
+    height: 85%;
+    width: 97%;
+    position: relative;
+    top: 50%;
+    right: -1%;
+    transform: translateY(-50%);
+    border: 1px solid gray;
+}
+
+.five{
+    direction: rtl;
+    margin-right: 30px;
+    text-align: right;
+    font-weight: bold;
+    color: yellow;
+
+}
+
+input{
+    margin: 5px;
+    width: 50px;
+}
+
+#six
+{
+    font-size: 50px;
+    color: red;
+}
+
+button{
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+#endtext{
+    font-size: large;
+    font-weight: bold;
+    color: red;
+}
